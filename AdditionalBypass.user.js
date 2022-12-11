@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name       Additional Bypass
 // @namespace  Violentmonkey Scripts
+// @downloadURL https://github.com/motoonepower/scripts/raw/main/AdditionalBypass.user.js
 // @updateURL  https://github.com/motoonepower/scripts/raw/main/AdditionalBypass.user.js
 // @match      *://cutdl.xyz/*
 // @match      *://zagl.info/*
