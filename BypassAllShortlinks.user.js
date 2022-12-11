@@ -35,6 +35,7 @@
 // @name:pt-BR Bypass Todos Links curtos
 // @name:fr-CA Bypass Tout Lien courts
 // @namespace  Violentmonkey Scripts
+// @downloadURL https://github.com/motoonepower/scripts/raw/main/BypassAllShortlinks.user.js
 // @updateURL  https://github.com/motoonepower/scripts/raw/main/BypassAllShortlinks.user.js
 // @version    70.5
 // @grant      none
