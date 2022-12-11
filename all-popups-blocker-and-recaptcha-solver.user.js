@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name        All Popups Blocker and reCAPTCHA Solver
 // @namespace   Violentmonkey Scripts
+// @downloadURL https://github.com/motoonepower/scripts/raw/main/all-popups-blocker-and-recaptcha-solver.user.js
 // @updateURL  https://github.com/motoonepower/scripts/raw/main/all-popups-blocker-and-recaptcha-solver.user.js
 // @include     /^(https?:\/\/)(.+)?(shortzon|coinadfly|bclikeqt|fc-lc|claimclicks)(\.com)(\/.*)/
 // @include     /^(https?:\/\/)(.+)?(downfile|promo-visits)(\.site)(\/.*)/
