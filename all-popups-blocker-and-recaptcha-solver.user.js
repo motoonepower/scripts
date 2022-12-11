@@ -19,7 +19,6 @@
 // @match       *://*.mitly.us/*
 // @match       *://*.aii.sh/*
 // @match       *://*.iir.ai/*
-// @match       *://*/recaptcha/*
 // @version     4.4
 // @author      Blogger Pemula
 // @run-at      document-start
