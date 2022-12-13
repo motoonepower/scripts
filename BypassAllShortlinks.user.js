@@ -259,7 +259,7 @@
     function clickIfElementExists(query, timeInSec = 1, funcName = 'setTimeout') {if (elementExists(query)) {window[funcName](function() {click(query);}, timeInSec * 1000);}}
     function Captchasub(query, act = 'submit', timeInSec = 0.5) {if (elementExists(query)) {var timer = setInterval(function() {if (window.grecaptcha && !!window.grecaptcha.getResponse?.()) {bp(query)[act](); clearInterval(timer);}}, timeInSec * 1000);}}
     function Captchaklik(query, act = 'click', timeInSec = 1) {if (elementExists(query)) {var timer = setInterval(function() {if (window.grecaptcha && !!window.grecaptcha.getResponse?.()) {bp(query)[act](); clearInterval(timer);}}, timeInSec * 1000);}}
-    function redirect(url, blog = true) {location = blog ? 'https://rotator.nurul-huda.sch.id/?url=' + url : url;}
+    function redirect(url, blog = true) {location = blog ? 'https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=' + url : url;}
     function BypassedByBloggerPemula(re_domain, data, blog) { if (!re_domain.test(location.host)) return;
         if (typeof data === 'function') return data();
         if (Array.isArray(data)) data = {'/': data};
@@ -358,7 +358,7 @@
     // Injecting from start document code by https://gist.github.com/lenivene
     if (['magybu.net', 'xervoo.net', 'hurirk.net', 'usfinf.net', 'eloism.net', 'neexulro.net'].indexOf(location.host) > -1){Object.defineProperty(window,"ysmm",{set:function(b){var a=b,c="",d="";for(b=0;b<a.length;b++)0==b%2?c+=a.charAt(b):d=a.charAt(b)+d;a=(c+d).split("");for(b=0;b<a.length;b++)if(!isNaN(a[b]))for(c=b+1;c<a.length;c++)isNaN(a[c])||(d=a[b]^a[c],10>d&&(a[b]=d),b=c,c=a.length);a=a.join("");a=window.atob(a);a=a.substring(a.length-(a.length-16));!(b=a=a.substring(0,a.length-16))||0!==b.indexOf("http://")&&0!==b.indexOf("https://")||(document.write("\x3c!--"),window.stop(),window.onbeforeunload=null,window.location=b);}});}
     // Injecting code from start and the end of document coded by @Konf
-    if (['interactive', 'complete'].includes(document.readyState)) {onHtmlLoaded();} else {document.addEventListener('DOMContentLoaded', onHtmlLoaded);} function onHtmlLoaded() {if (['bas.nurul-huda.or.id', 'rotator.nurul-huda.sch.id'].indexOf(location.host) > -1){ } else { const listhide = document.querySelectorAll('#frame,.adb,#iframe,#particles-js,#canvas,.floawing-banner,#orquidea-slideup,.floating-banner,#wcfloatDiv4,#preloader,.vanta-canvas,.particles-js-canvas-el,#s65c,#ofc9,#overlay,#footerads,#d7b2,#_m_a_,#masthead_,.oulcsy,.sticky-bottom,.sticky-bottom1,.sticky-bottom2,.sticky-bottom3,.bElNbEFRL3JvbG89,.separator,html body iframe,html iframe,#cookie-pop,.vmyor,.tnjmvneldp,.full_post_area.rh-container,.sc-content-aside,#ofc9,.floawing-banner,div.demand-supply,.the_content,.alternative-ad,#leftads'); for (const element of listhide) {element.remove();}}
+    if (['interactive', 'complete'].includes(document.readyState)) {onHtmlLoaded();} else {document.addEventListener('DOMContentLoaded', onHtmlLoaded);} function onHtmlLoaded() {if (['adguardteam.github.io', 'adguardteam.github.io'].indexOf(location.host) > -1){ } else { const listhide = document.querySelectorAll('#frame,.adb,#iframe,#particles-js,#canvas,.floawing-banner,#orquidea-slideup,.floating-banner,#wcfloatDiv4,#preloader,.vanta-canvas,.particles-js-canvas-el,#s65c,#ofc9,#overlay,#footerads,#d7b2,#_m_a_,#masthead_,.oulcsy,.sticky-bottom,.sticky-bottom1,.sticky-bottom2,.sticky-bottom3,.bElNbEFRL3JvbG89,.separator,html body iframe,html iframe,#cookie-pop,.vmyor,.tnjmvneldp,.full_post_area.rh-container,.sc-content-aside,#ofc9,.floawing-banner,div.demand-supply,.the_content,.alternative-ad,#leftads'); for (const element of listhide) {element.remove();}}
     if (['up4cash.com', 'app.menjelajahi.com', 'blog.menjelajahi.com'].indexOf(location.host) > -1){ } else { const listre = document.querySelectorAll('.banner-inner'); for (const element of listre) {element.remove();}}
     if (['taiwancnan.com', 'blog.disheye.com'].indexOf(location.host) > -1){ } else { const listr = document.querySelectorAll('.blog-item'); for (const element of listr) {element.remove();}}
     if (['patak.dropz.xyz', 'my.dropz.xyz'].indexOf(location.host) > -1){ } else { const listd = document.querySelectorAll('.text-left'); for (const element of listd) {element.remove();}}
@@ -428,7 +428,7 @@
     function getLeft (d) {return parseInt(d.style.paddingLeft);}
     if (Numcode) {DigitNum = Numcode.parentElement.previousElementSibling.children[0].children;
     Numcode.value = [].slice.call(DigitNum).sort(function (d1, d2) {return getLeft(d1) - getLeft(d2);}).map(function(d){return d.textContent;}).join('');}
-    let $ = window.jQuery; let respect = 'https://bas.nurul-huda.or.id/?url='; // Don't use My Scripts if You Change/Remove My Blogs, Except You Make Donations!!!.
+    let $ = window.jQuery; let respect = 'https://adguardteam.github.io/AnonymousRedirect/redirect.html?url='; // Don't use My Scripts if You Change/Remove My Blogs, Except You Make Donations!!!.
     if (location.host === 'www.4shared.com') {if (elementExists('.d3topTitle')) {$('.premium').text('IMPORTANT TRICKS By BloggerPemula : Wait 5 Second or more , Dont Close this Page ,Right Click Here Link Above, Open Link in New Tab, Close the Tabs if Your File not Downloaded, Try again the Right Click Methods, at This Time i Dont have Idea to Make it Auto , Do the Same Trick for All File Type in 4shared Site . Regards...');}}
     if (['short.croclix.me','www.adz7short.space'].indexOf(location.host) > -1) {function fireMouseEvents(query) { const element = document.querySelector(query);
     if (!element) return; ['mouseover', 'mousedown', 'mouseup', 'click'].forEach(eventName => {if (element.fireEvent) { element.fireEvent('on' + eventName);} else { const eventObject = document.createEvent('MouseEvents');
@@ -511,7 +511,7 @@
     case 'xmod.in': if (h.pathname === '/blog/verify/' && /^\?([^&]+)/.test(h.search)) { meta('https://mytop5.club/verify/?' + RegExp.$1);} break;
     case 'bingeflix.xyz': if (h.pathname === '/' && h.searchParams.has('link')) {meta ('https://linkyearn.com/' + h.searchParams.get('link'));}break;
     case 'hosting4lifetime.com': if (h.pathname === '/blog/verify/' && /^\?([^&]+)/.test(h.search)) { meta('https://abcshort.com/' + RegExp.$1);} break;
-    case 'acortame.xyz': if (window.location.hash) {location.href ="https://rotator.nurul-huda.sch.id/?url="+(atob(window.location.hash.substr(1)));} break;
+    case 'acortame.xyz': if (window.location.hash) {location.href ="https://adguardteam.github.io/AnonymousRedirect/redirect.html?url="+(atob(window.location.hash.substr(1)));} break;
     case 'blog.textpage.xyz': if (h.searchParams.has('ajhvgadhdhgkdsvkd')) { meta('https://short.url2go.in/' + h.searchParams.get('ajhvgadhdhgkdsvkd'));} break;
     case 'gadgets.techymedies.com': if (h.pathname === '/' && h.searchParams.has('token')) { meta('https://blog.disheye.com/' + h.searchParams.get('token'));} break;
     case 'short.clickscoin.com': case 'watchdoge.xyz': case 'dogeclick.net': if (/^\/ccsl\/([^/]+)/.test(h.pathname)) {return 'https://ccsl.xyz/' + RegExp.$1;}break;
