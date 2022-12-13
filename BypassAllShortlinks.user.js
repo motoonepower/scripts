@@ -230,7 +230,6 @@
 // @match   *://konstantinova.net/verify/*
 // @match   *://playnano.online/watch-and*
 // @match   *://adbtc.top/surfiat/browse/*
-// @match   *://rotator.nurul-huda.sch.id/*
 // @match   *://*api-secure.solvemedia.com/*
 // @match   *://faucetcrypto.com/claim/step/*
 // @match   *://linkvertise.download/download/*
@@ -238,7 +237,7 @@
 // @match   *://cryptonetos.ru/page/redirect*
 // @match   *://galerybits.com/protectlink/*
 // @match   *://earnultimate.space/short/*
-// @match   *://bas.nurul-huda.or.id/*
+// @match   *://adguardteam.github.io/*
 // ==/UserScript==
 // ================================================================================================================================================================
 //                                          PLEASE READ SCRIPT INFO BEFORE USE
