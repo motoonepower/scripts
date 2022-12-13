@@ -443,7 +443,7 @@
     blogger.replaceWith('<button class="btn btn-default , col-md-12 text-center" onclick="javascript: return false;"><b>Thanks for using Bypass All Shortlinks Scripts and for Donations , Regards : Bloggerpemula</b></button>');
     pemula.replaceWith('<button class="btn btn-default , col-md-12 text-center" onclick="javascript: return false;"><b>Thanks for using Bypass All Shortlinks Scripts and for Donations , Regards : Bloggerpemula</b></button>');}, success: function(result, xhr) {location.href=respect+result.url;}});});}
     const bas = (h => { const result = { isNotifyNeeded: false, redirectDelay: 0, link: undefined };
-    switch (h.host) {case 'bas.nurul-huda.or.id': case 'rotator.nurul-huda.sch.id': if (h.pathname === '/' && h.searchParams.has('url') && h.searchParams.has('sn')) {
+    switch (h.host) {case 'adguardteam.github.io': case 'adguardteam.github.io': if (h.pathname === '/' && h.searchParams.has('url') && h.searchParams.has('sn')) {
         result.link = h.searchParams.get('url') + '&sn=' + h.searchParams.get('sn').replace('&m=1', ''); result.redirectDelay = 5; result.isNotifyNeeded = true; return result;
     } else if (h.pathname === '/' && h.searchParams.has('url') && h.searchParams.has('sub_id') && h.searchParams.has('site_id') && h.searchParams.has('ip_address')) {
         result.link = h.searchParams.get('url') + '&sub_id=' + h.searchParams.get('sub_id') + '&site_id=' + h.searchParams.get('site_id') + '&ip_address=' + h.searchParams.get('ip_address'); result.redirectDelay = 5; result.isNotifyNeeded = true; return result;
