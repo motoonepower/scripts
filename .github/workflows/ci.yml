@@ -17,12 +17,26 @@ jobs:
         id: update
         shell: bash
         run: |
-          mkdir og && cd og
+          cd og
           wget https://greasyfork.org/scripts/431691-bypass-all-shortlinks/code/Bypass%20All%20Shortlinks.user.js
           wget https://greasyfork.org/scripts/443888-additional-bypass/code/Additional%20Bypass.user.js
           wget https://greasyfork.org/scripts/439683-all-popups-blocker-and-recaptcha-solver/code/All%20Popups%20Blocker%20and%20reCAPTCHA%20Solver.user.js
           cp -r . ..
           cd -
+          sed -i '3i\'// @downloadURL https://github.com/motoonepower/scripts/raw/main/Bypass%20All%20Shortlinks.user.js'' "Bypass All Shortlinks.user.js"
+          sed -i '3i\'// @updateURL https://github.com/motoonepower/scripts/raw/main/Bypass%20All%20Shortlinks.user.js'' "Bypass All Shortlinks.user.js"
+          sed -i 's https://rotator.nurul-huda.sch.id/?url= https://adguardteam.github.io/AnonymousRedirect/redirect.html?url= ' "Bypass All Shortlinks.user.js"
+          sed -i 's https://bas.nurul-huda.or.id/?url= https://adguardteam.github.io/AnonymousRedirect/redirect.html?url= ' "Bypass All Shortlinks.user.js"
+          sed -i 's rotator.nurul-huda.sch.id adguardteam.github.io ' "Bypass All Shortlinks.user.js"
+          sed -i 's bas.nurul-huda.or.id adguardteam.github.io ' "Bypass All Shortlinks.user.js"
+          sed -i '3i\'// @downloadURL https://github.com/motoonepower/scripts/raw/main/Additional%20Bypass.user.js'' "Additional Bypass.user.js"
+          sed -i '3i\'// @updateURL https://github.com/motoonepower/scripts/raw/main/Additional%20Bypass.user.js'' "Additional Bypass.user.js"
+          sed -i 's https://rotator.nurul-huda.sch.id/?url= https://adguardteam.github.io/AnonymousRedirect/redirect.html?url= ' "Additional Bypass.user.js"
+          sed -i 's https://bas.nurul-huda.or.id/?url= https://adguardteam.github.io/AnonymousRedirect/redirect.html?url= ' "Additional Bypass.user.js"
+          sed -i 's rotator.nurul-huda.sch.id adguardteam.github.io ' "Additional Bypass.user.js"
+          sed -i '3i\'// @downloadURL https://github.com/motoonepower/scripts/raw/main/All%20Popups%20Blocker%20and%20reCAPTCHA%20Solver.user.js'' "All Popups Blocker and reCAPTCHA Solver.user.js"
+          sed -i '3i\'// @updateURL https://github.com/motoonepower/scripts/raw/main/All%20Popups%20Blocker%20and%20reCAPTCHA%20Solver.user.js'' "All Popups Blocker and reCAPTCHA Solver.user.js"
+          sed -i 's recaptcha adguardteam.github.io ' "All Popups Blocker and reCAPTCHA Solver.user.js"
           git config --global user.email "rushiacc1@protonmail.com"
           git config --global user.name "motoonepower"
           git config --global color.ui true
