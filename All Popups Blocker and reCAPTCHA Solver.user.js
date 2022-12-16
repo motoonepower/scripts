@@ -1,5 +1,7 @@
 // ==UserScript==
 // @name        All Popups Blocker and reCAPTCHA Solver
+// @updateURL https://github.com/motoonepower/scripts/raw/main/All%20Popups%20Blocker%20and%20reCAPTCHA%20Solver.user.js
+// @downloadURL https://github.com/motoonepower/scripts/raw/main/All%20Popups%20Blocker%20and%20reCAPTCHA%20Solver.user.js
 // @namespace   Violentmonkey Scripts
 // @include     /^(https?:\/\/)(.+)?(shortzon|coinadfly|bclikeqt|fc-lc|claimclicks)(\.com)(\/.*)/
 // @include     /^(https?:\/\/)(.+)?(downfile|promo-visits)(\.site)(\/.*)/
@@ -18,7 +20,7 @@
 // @match       *://*.mitly.us/*
 // @match       *://*.aii.sh/*
 // @match       *://*.iir.ai/*
-// @match       *://*/recaptcha/*
+// @match       *://*/adguardteam.github.io/*
 // @version     4.4
 // @author      Blogger Pemula
 // @run-at      document-start
