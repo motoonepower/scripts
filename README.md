@@ -6,9 +6,9 @@ Install
 
 [AdditionalBypass](https://github.com/motoonepower/scripts/raw/main/AdditionalBypass.user.js)   [og Version](https://greasyfork.org/scripts/443888-additional-bypass/code/Additional%20Bypass.user.js)
 
-[all-popups-blocker-and-recaptcha-solver](https://github.com/motoonepower/scripts/raw/main/all-popups-blocker-and-recaptcha-solver.user.js)   [og](https://greasyfork.org/scripts/439683-all-popups-blocker-and-recaptcha-solver/code/All%20Popups%20Blocker%20and%20reCAPTCHA%20Solver.user.js)
+[all-popups-blocker-and-recaptcha-solver](https://github.com/motoonepower/scripts/raw/main/all-popups-blocker-and-recaptcha-solver.user.js)   [og version](https://greasyfork.org/scripts/439683-all-popups-blocker-and-recaptcha-solver/code/All%20Popups%20Blocker%20and%20reCAPTCHA%20Solver.user.js)
 
-[dropgalaxy](https://github.com/motoonepower/scripts/raw/main/dropgalaxy.user.js)   [og](https://github.com/jaygohil15/DropGalaxy.com-Bypass-Dynamic-click)
+[dropgalaxy](https://github.com/motoonepower/scripts/raw/main/dropgalaxy.user.js)   [og version](https://github.com/jaygohil15/DropGalaxy.com-Bypass-Dynamic-click)
 
 
 Search for scripts
