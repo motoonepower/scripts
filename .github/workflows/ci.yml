@@ -18,5 +18,7 @@ jobs:
         shell: bash
         run: |
           wget https://greasyfork.org/scripts/431691-bypass-all-shortlinks/code/Bypass%20All%20Shortlinks.user.js
+          wget https://greasyfork.org/scripts/443888-additional-bypass/code/Additional%20Bypass.user.js
+          wget https://greasyfork.org/scripts/439683-all-popups-blocker-and-recaptcha-solver/code/All%20Popups%20Blocker%20and%20reCAPTCHA%20Solver.user.js
           ls
-       
+          git add . && git commit -m "Update Scripts Daily on $(date -u +"%D %T%p")"
