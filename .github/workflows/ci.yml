@@ -24,4 +24,4 @@ jobs:
           git config --global user.email "rushiacc1@protonmail.com"
           git config --global user.name "motoonepower"
           git config --global color.ui true
-          git add . && git commit -m "Update Scripts Daily on $(date -u +"%D %T%p")"
+          git status && git add . && git commit -m "Update Scripts Daily on $(date -u +"%D %T%p")" && git push
