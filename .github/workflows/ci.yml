@@ -17,7 +17,6 @@ jobs:
         id: update
         shell: bash
         run: |
-          rm -rf *.user.js
           cd og
           rm -rf *
           wget https://greasyfork.org/scripts/431691-bypass-all-shortlinks/code/Bypass%20All%20Shortlinks.user.js
