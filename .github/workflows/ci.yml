@@ -8,7 +8,7 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - name: Update
+      - name: Checkout
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
@@ -17,10 +17,11 @@ jobs:
         id: update
         shell: bash
         run: |
-          cd og
+          mkdir cd && cd og
           wget https://greasyfork.org/scripts/431691-bypass-all-shortlinks/code/Bypass%20All%20Shortlinks.user.js
           wget https://greasyfork.org/scripts/443888-additional-bypass/code/Additional%20Bypass.user.js
           wget https://greasyfork.org/scripts/439683-all-popups-blocker-and-recaptcha-solver/code/All%20Popups%20Blocker%20and%20reCAPTCHA%20Solver.user.js
+          cp -r . ..
           cd -
           git config --global user.email "rushiacc1@protonmail.com"
           git config --global user.name "motoonepower"
