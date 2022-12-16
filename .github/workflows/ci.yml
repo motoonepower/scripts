@@ -25,6 +25,7 @@ jobs:
           wget https://greasyfork.org/scripts/443888-additional-bypass/code/Additional%20Bypass.user.js
           wget https://greasyfork.org/scripts/439683-all-popups-blocker-and-recaptcha-solver/code/All%20Popups%20Blocker%20and%20reCAPTCHA%20Solver.user.js
           cp -r . ..
+          pwd
           cd -
           perl -w -i -l -p -e 'print "// \@downloadURL https://github.com/motoonepower/scripts/raw/main/Bypass%20All%20Shortlinks.user.js" if $. == 3' "Bypass All Shortlinks.user.js"
           perl -w -i -l -p -e 'print "// \@updateURL https://github.com/motoonepower/scripts/raw/main/Bypass%20All%20Shortlinks.user.js" if $. == 3' "Bypass All Shortlinks.user.js"
