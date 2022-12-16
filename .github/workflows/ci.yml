@@ -46,4 +46,4 @@ jobs:
           git config --global user.email "rushiacc1@protonmail.com"
           git config --global user.name "motoonepower"
           git config --global color.ui true
-          git status && git add . && git commit -m "Updated Scripts on $(date -u +"%D")" && git push
+          git status && git add . && git commit -m "Updated Scripts on $(date -u +"%D")" && git push || echo done
