@@ -26,7 +26,7 @@
     const RECAPTCHA_STATUS = "#recaptcha-accessible-status";
     const DOSCAPTCHA = ".rc-doscaptcha-body";
     const VERIFY_BUTTON = "#recaptcha-verify-button";
-    const MAX_ATTEMPTS = 5;
+    const MAX_ATTEMPTS = 2;
     var requestCount = 0;
     var recaptchaLanguage = qSelector("html").getAttribute("lang");
     var audioUrl = "";
