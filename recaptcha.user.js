@@ -1,24 +1,12 @@
 // ==UserScript==
 // @name         Recaptcha Solver (Automatically solves Recaptcha in browser)
 // @namespace    Recaptcha Solver
-// @version      2.1
+// @version      1.0
 // @description  Recaptcha Solver in Browser | Automatically solves Recaptcha in browser
-// @author       engageub
-// @match        *://*/recaptcha/*
+// @author       MegaRentry ReHost
+// @match        *://*/recaptcha/api2/*
 // @connect      engageub.pythonanywhere.com
-// @connect      engageub1.pythonanywhere.com
 // @grant        GM_xmlhttpRequest
-/*
-██████╗ ███████╗ ██████╗ █████╗ ██████╗ ████████╗ ██████╗██╗  ██╗ █████╗     ███████╗ ██████╗ ██╗    ██╗   ██╗███████╗██████╗
-██╔══██╗██╔════╝██╔════╝██╔══██╗██╔══██╗╚══██╔══╝██╔════╝██║  ██║██╔══██╗    ██╔════╝██╔═══██╗██║    ██║   ██║██╔════╝██╔══██╗
-██████╔╝█████╗  ██║     ███████║██████╔╝   ██║   ██║     ███████║███████║    ███████╗██║   ██║██║    ██║   ██║█████╗  ██████╔╝
-██╔══██╗██╔══╝  ██║     ██╔══██║██╔═══╝    ██║   ██║     ██╔══██║██╔══██║    ╚════██║██║   ██║██║    ╚██╗ ██╔╝██╔══╝  ██╔══██╗
-██║  ██║███████╗╚██████╗██║  ██║██║        ██║   ╚██████╗██║  ██║██║  ██║    ███████║╚██████╔╝███████╗╚████╔╝ ███████╗██║  ██║
-╚═╝  ╚═╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝        ╚═╝    ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝    ╚══════╝ ╚═════╝ ╚══════╝ ╚═══╝  ╚══════╝╚═╝  ╚═╝
-/*
-/** Note: This script is solely intended for the use of educational purposes only and not to abuse any website.
-This script uses audio in order to solve the captcha. Use it wisely and do not abuse any website.
-*/
 // ==/UserScript==
 (function() {
     'use strict';
@@ -43,25 +31,12 @@ This script uses audio in order to solve the captcha. Use it wisely and do not a
     var recaptchaLanguage = qSelector("html").getAttribute("lang");
     var audioUrl = "";
     var recaptchaInitialStatus = qSelector(RECAPTCHA_STATUS) ? qSelector(RECAPTCHA_STATUS).innerText : ""
-    var serversList = ["https://engageub.pythonanywhere.com","https://engageub1.pythonanywhere.com"];
-    var latencyList = Array(serversList.length).fill(10000);
     //Check for visibility && Click the check box
     function isHidden(el) {
         return(el.offsetParent === null)
     }
 
     async function getTextFromAudio(URL) {
-        var minLatency = 100000;
-        var url = "";
-
-        //Selecting the last/latest server by default if latencies are equal
-        for(let k=0; k< latencyList.length;k++){
-            if(latencyList[k] <= minLatency){
-                minLatency = latencyList[k];
-                url = serversList[k];
-            }
-        }
-
         requestCount = requestCount + 1;
         URL = URL.replace("recaptcha.net", "google.com");
         if(recaptchaLanguage.length < 1) {
@@ -69,15 +44,14 @@ This script uses audio in order to solve the captcha. Use it wisely and do not a
             recaptchaLanguage = "en-US";
         }
         console.log("Recaptcha Language is " + recaptchaLanguage);
-
         GM_xmlhttpRequest({
             method: "POST",
-            url: url,
+            url: "https://engageub.pythonanywhere.com",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
             },
             data: "input=" + encodeURIComponent(URL) + "&lang=" + recaptchaLanguage,
-            timeout: 60000,
+            timeout: 15000,
             onload: function(response) {
                 console.log("Response::" + response.responseText);
                 try {
@@ -114,57 +88,12 @@ This script uses audio in order to solve the captcha. Use it wisely and do not a
         });
     }
 
-
-    async function pingTest(url) {
-        var start = new Date().getTime();
-        GM_xmlhttpRequest({
-            method: "GET",
-            url: url,
-            headers: {
-                "Content-Type": "application/x-www-form-urlencoded"
-            },
-            data: "",
-            timeout: 8000,
-            onload: function(response) {
-
-                if(response && response.responseText && response.responseText=="0") {
-                    var end = new Date().getTime();
-                    var milliseconds = end - start;
-
-                    // For large values use Hashmap
-                    for(let i=0; i< serversList.length;i++){
-                        if (url == serversList[i]) {
-                            latencyList[i] = milliseconds;
-                        }
-                    }
-                }
-            },
-            onerror: function(e) {
-                console.log(e);
-            },
-            ontimeout: function() {
-                console.log("Ping Test Response Timed out for " + url);
-            },
-        });
-    }
-
-
     function qSelectorAll(selector) {
         return document.querySelectorAll(selector);
     }
 
     function qSelector(selector) {
         return document.querySelector(selector);
-    }
-
-
-
-    if(qSelector(CHECK_BOX)){
-        qSelector(CHECK_BOX).click();
-    } else if(window.location.href.includes("bframe")){
-        for(let i=0; i< serversList.length;i++){
-            pingTest(serversList[i]);
-        }
     }
 
     //Solve the captcha using audio
@@ -194,8 +123,7 @@ This script uses audio in order to solve the captcha. Use it wisely and do not a
                 if((!waitingForAudioResponse && qSelector(AUDIO_SOURCE) && qSelector(AUDIO_SOURCE).src
                     && qSelector(AUDIO_SOURCE).src.length > 0 && audioUrl == qSelector(AUDIO_SOURCE).src
                     && qSelector(RELOAD_BUTTON)) ||
-                   (qSelector(AUDIO_ERROR_MESSAGE) && qSelector(AUDIO_ERROR_MESSAGE).innerText.length > 0 && qSelector(RELOAD_BUTTON) &&
-                    !qSelector(RELOAD_BUTTON).disabled)){
+                   (qSelector(AUDIO_ERROR_MESSAGE) && qSelector(AUDIO_ERROR_MESSAGE).innerText.length > 0 && qSelector(RELOAD_BUTTON))){
                     qSelector(RELOAD_BUTTON).click();
                 } else if(!waitingForAudioResponse && qSelector(RESPONSE_FIELD) && !isHidden(qSelector(RESPONSE_FIELD))
                           && !qSelector(AUDIO_RESPONSE).value && qSelector(AUDIO_SOURCE) && qSelector(AUDIO_SOURCE).src
