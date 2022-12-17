@@ -14,7 +14,7 @@
     var checkBoxClicked = false;
     var waitingForAudioResponse = false;
     //Node Selectors
-    const CHECK_BOX = ".recaptcha-checkbox-border";
+    const CHECK_BOX = "#recaptcha-checkbox-border";
     const AUDIO_BUTTON = "#recaptcha-audio-button";
     const PLAY_BUTTON = ".rc-audiochallenge-play-button .rc-button-default";
     const AUDIO_SOURCE = "#audio-source";
