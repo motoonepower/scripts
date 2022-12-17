@@ -21,7 +21,6 @@ jobs:
           rm -rf "Bypass All Shortlinks.user.js"
           rm -rf "Additional Bypass.user.js"
           rm -rf "All Popups Blocker and reCAPTCHA Solver.user.js"
-          rm -rf "hcaptcha.user.js"
           mkdir og && cd og
           wget https://greasyfork.org/scripts/431691-bypass-all-shortlinks/code/Bypass%20All%20Shortlinks.user.js
           wget https://greasyfork.org/scripts/443888-additional-bypass/code/Additional%20Bypass.user.js
