@@ -4,7 +4,6 @@
 // @downloadURL https://github.com/motoonepower/scripts/raw/main/Additional%20Bypass.user.js
 // @namespace  Violentmonkey Scripts
 // @match      *://cutdl.xyz/*
-// @match      *://zagl.info/*
 // @match      *://stfly.me/*
 // @match      *://shrinke.me/*
 // @match      *://gplinks.co/*
@@ -20,16 +19,10 @@
 // @match      *://namemegablog.com/*
 // @match      *://doctor-groups.com/*
 // @match      *://link.turkdown.com/*
-// @match      *://hitbits.io/shl/v/*
-// @match      *://getitall.top/shl/v/*
-// @match      *://simplebits.io/shl/v/*
-// @match      *://pentafaucet.com/shl/v/*
-// @match      *://satoshilabs.net/shl/v/*
 // @match      *://intercelestial.com/*
 // @match      *://safe.intipanime.com/*
-// @match      *://cryptorotator.website/*
 // @grant      none
-// @version    3.6
+// @version    3.7
 // @author     Bloggerpemula
 // @run-at     document-start
 // @description Bypass Addition for Bypass All Shortlinks
@@ -47,7 +40,7 @@
     'use strict';
     const bp = query => document.querySelector(query);
     const elementExists = query => bp(query) !== null;
-    function submit(query) {bp(query).submit()}
+    function submit(query) {bp(query).submit();}
     function redirect(url, blog = true) {location = blog ? 'https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=' + url : url;}
 
     if (['interactive', 'complete'].includes(document.readyState)) {onHtmlLoaded();} else {document.addEventListener('DOMContentLoaded', onHtmlLoaded);}
@@ -55,8 +48,6 @@
     if (['safe.intipanime.com', 'intercelestial.com', 'tribuntekno.com', 'mealob.com', 'smgplaza.com', 'namemegablog.com', 'blackleadr.com', 'megablogme.com'].indexOf(location.host) > -1) {function Bypass () {$("#showlink").delay(80).fadeIn("fast");$("#pleasewait").fadeIn("fast");} Bypass ();
     $('#landing').submit(); $('#headimg').remove(); $('#pleasewait').remove(); $('body,html').animate({scrollTop:0}, 100);
     bp('.soractrl').appendChild(document.querySelector('.spoint')); bp('.soractrl img').remove(); bp('.spoint').src = 'https://i.ibb.co/c1tm9mz/Bypassed-By-Bloggerpemula.png'; bp('.spoint').title = 'Please Click Manually , Sorry at this time i dont have idea to make this auto, Silahkan di klik manual, maaf belum nemu ide biar bisa otomatis';}
-    if (['satoshilabs.net', 'simplebits.io', 'getitall.top', 'hitbits.io', 'pentafaucet.com'].indexOf(location.host) > -1) {setInterval(function(){$('.btn-accent.btn').click();}, 3000);
-    setInterval(function(){$('.btn-primary.btn').click();}, 3000);}
     if (elementExists('#go-link')) {$('#go-link').submit(function() {var form = $(this); var url = form.attr('action'); const pesan = form.find('button'); const notforsale = $(".navbar-collapse.collapse");
     const blogger = $(".main-header"); const pemula = $(".col-sm-6.hidden-xs");
     $.ajax({type: "POST", url: url, data: form.serialize(),
