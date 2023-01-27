@@ -3,13 +3,14 @@
 // @updateURL https://github.com/motoonepower/scripts/raw/main/All%20Popups%20Blocker%20and%20reCAPTCHA%20Solver.user.js
 // @downloadURL https://github.com/motoonepower/scripts/raw/main/All%20Popups%20Blocker%20and%20reCAPTCHA%20Solver.user.js
 // @namespace   Violentmonkey Scripts
-// @include     /^(https?:\/\/)(.+)?(shortzon|coinadfly|bclikeqt|fc-lc|claimclicks)(\.com)(\/.*)/
+// @include     /^(https?:\/\/)(.+)?(shortzon|coinadfly|fc-lc|claimclicks)(\.com)(\/.*)/
 // @include     /^(https?:\/\/)(.+)?(downfile|promo-visits)(\.site)(\/.*)/
 // @include     /^(https?:\/\/)(.+)?(bcvc|satoshi-win)(\.xyz)(\/.*)/
 // @include     /^(https?:\/\/)(1dogecoin|faucet)(\.work)(\/.*)/
 // @match       *://*.filesearch.link/*
 // @match       *://*.trangchu.news/*
 // @match       *://*.bitcoinly.in/*
+// @match       *://*.cryptosh.pro/*
 // @match       *://*.vshort.link/*
 // @match       *://*.linka.click/*
 // @match       *://*.linkres.in/*
@@ -21,7 +22,7 @@
 // @match       *://*.aii.sh/*
 // @match       *://*.iir.ai/*
 // @match       *://*/adguardteam.github.io/*
-// @version     4.4
+// @version     4.5
 // @author      Blogger Pemula
 // @run-at      document-start
 // @license     GPL-3.0-or-later
