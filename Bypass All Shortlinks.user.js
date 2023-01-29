@@ -37,7 +37,7 @@
 // @name:pt-BR Bypass Todos Links curtos
 // @name:fr-CA Bypass Tout Lien courts
 // @namespace  Violentmonkey Scripts
-// @version    80.6
+// @version    80.7
 // @grant      none
 // @author     Bloggerpemula
 // @run-at     document-start
@@ -92,10 +92,10 @@
 // @include /^(https?:\/\/)(.+)?(takez|linksfire|vosan|tinygo|veganab|adfloz|fexkomin|urlearn|linksly)(\.co)(\/.*)/
 // @include /^(https?:\/\/)(ctbl|girls-like|gobits|zoss|shrinke|tlin|terafly|petafly|gigafly|adnews|papanews|panyflay|mozzfly|shortus|short.croclix|best-news|mega-news|wildblog|specx|dddrive|linkpoi|m.newhit|mboost|linkshorts|exafly|nonofly|lozzfly|uptomega|stfly|adbull|youshort|health-and|cutx|adsk|linkfly|shorter.earn-hub|pkin|cashando|hunterkiller|acortalink|ar-goal|linkdam)(\.me)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(theconomy|richlink)(\.me)(\/.*)/
-// @include /^(https?:\/\/)(newforex|wplink|nbyts|wealthystyle|clicksfly|happy-living|webcoin.coinrain|teacherana|earnow|earn-cash|yourtechnology|apks|network-earn|battleroyal|forexit|shopforex)(\.online)(\/.*)/
+// @include /^(https?:\/\/)(newforex|wplink|nbyts|wealthystyle|clicksfly|happy-living|webcoin.coinrain|teacherana|earnow|earn-cash|yourtechnology|apks|network-earn|battleroyal|forexit|shopforex|o-pro)(\.online)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(adslinkfly|readi|linkmumet|shorte|mefly)(\.online)(\/.*)/
-// @include /^(https?:\/\/)(sitr|downfile|savelink|linkshortify|shareus|promo-visits|mobileprice|mynurse|short1|forextrader|softindex)(\.site)(\/.*)/
-// @include /^(https?:\/\/)(.+)?(cekip|link4rev|coin-city|urlcash|alwrificlick)(\.site)(\/.*)/
+// @include /^(https?:\/\/)(sitr|downfile|savelink|linkshortify|shareus|mobileprice|mynurse|short1|forextrader|softindex)(\.site)(\/.*)/
+// @include /^(https?:\/\/)(.+)?(cekip|link4rev|coin-city|urlcash|alwrificlick|promo-visits)(\.site)(\/.*)/
 // @include /^(https?:\/\/)(earnme|sanoybonito|automotur|kooza|1link|zentum|mytop5|forexwaw|megatube)(\.club)(\/.*)/
 // @include /^(https?:\/\/)(.+)?(usanewstoday|kadal|webhostingtips)(\.club)(\/.*)/
 // @include /^(https?:\/\/)(adrev|paid4|yousm|coinpayz|tr|yocto|clk.dti|besturl|boostme|takefile|appo|pureshort|linkshortifyx|panyshort|mdiskshortner|leit|shortano|shortino|streamcheck)(\.link)(\/.*)/
@@ -363,7 +363,7 @@
     // Injecting from start document code by https://gist.github.com/lenivene
     if (['magybu.net', 'xervoo.net', 'hurirk.net', 'usfinf.net', 'eloism.net', 'neexulro.net', 'oaxyteek.net'].indexOf(location.host) > -1){Object.defineProperty(window,"ysmm",{set:function(b){var a=b,c="",d="";for(b=0;b<a.length;b++)0==b%2?c+=a.charAt(b):d=a.charAt(b)+d;a=(c+d).split("");for(b=0;b<a.length;b++)if(!isNaN(a[b]))for(c=b+1;c<a.length;c++)isNaN(a[c])||(d=a[b]^a[c],10>d&&(a[b]=d),b=c,c=a.length);a=a.join("");a=window.atob(a);a=a.substring(a.length-(a.length-16));!(b=a=a.substring(0,a.length-16))||0!==b.indexOf("http://")&&0!==b.indexOf("https://")||(document.write("\x3c!--"),window.stop(),window.onbeforeunload=null,window.location=b);}});}
     // Injecting code from start and the end of document coded by @Konf
-    let Booster = ['diudemy.com', 'djxmaza.in', 'on-scroll.com', 'blog-everything.com', 'proviralhost.com', 'blogmado.com', 'btcpany.com','insuranceleadsinfo.com','kredilerim.com','softwaresolutionshere.com','freevpshere.com','porterfuneralhomee.com','shopforex.online','forexit.online','healthy4pepole.com'];
+    let Booster = ['diudemy.com', 'djxmaza.in', 'on-scroll.com', 'blog-everything.com', 'proviralhost.com', 'examtadka.com', 'blogmado.com', 'btcpany.com','insuranceleadsinfo.com','kredilerim.com','softwaresolutionshere.com','freevpshere.com','porterfuneralhomee.com','shopforex.online','forexit.online','healthy4pepole.com'];
     Booster.forEach(function(bs) {if (window.location.href.indexOf(bs) >= 0) {(function() {let FastInt = '{{1}}';if ( FastInt === '{{1}}' ) { FastInt = ''; }let delayArg = '{{2}}';if ( delayArg === '{{2}}' ) { delayArg = ''; }let boostArg = '{{3}}';if ( boostArg === '{{3}}' ) { boostArg = ''; }
     if ( FastInt === '' ) {FastInt = '.?';} else if ( FastInt.charAt(0) === '/' && FastInt.slice(-1) === '/' ) {FastInt = FastInt.slice(1, -1);} else {FastInt = FastInt.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');}const FastInter = new RegExp(FastInt);
     let delay = delayArg !== '*' ? parseInt(delayArg, 10) : -1;if ( isNaN(delay) || isFinite(delay) === false ) { delay = 1000; }
@@ -548,7 +548,6 @@
     BypassedByBloggerPemula(/1ink.cc/, function() {clickIfElementExists('#countingbtn', 1);});
     BypassedByBloggerPemula(/up-load.one/, function() {clickIfElementExists('#submitbtn', 1);});
     BypassedByBloggerPemula(/makemoneywithurl.com/, function() { bp('#hidden form').submit();});
-    BypassedByBloggerPemula(/djxmaza.in/, function() {clickIfElementExists('#wait1button', 3);});
     BypassedByBloggerPemula(/evoload.io/, function() {clickIfElementExists('#generatebtn', 1);});
     BypassedByBloggerPemula(/cryptosh.pro/, function() {clickIfElementExists('#EarnButton', 2);});
     BypassedByBloggerPemula(/keeplinks.org/, function() {clickIfElementExists('#btnchange', 2);});
@@ -580,6 +579,7 @@
     BypassedByBloggerPemula(/offrcms.xyz/, () => waitForElm('a#proceed', offr => redirect(offr.href, false)));
     BypassedByBloggerPemula(/userscloud.com|dosya.co/, function() {clickIfElementExists('#btn_download', 2);});
     BypassedByBloggerPemula(/hexupload.net/, function() {clickIfElementExists('.btn-success.btn-lg.btn', 1);});
+    BypassedByBloggerPemula(/djxmaza.in|examtadka.com/, function() {clickIfElementExists('#wait1button', 3);});
     BypassedByBloggerPemula(/bildirim.in|bildirim.eu/, function() {clickIfElementExists('#btnPermission', 1);});
     BypassedByBloggerPemula(/solidfiles.com/, function() {clickIfElementExists('.btn-sm.btn-primary.btn', 2);});
     BypassedByBloggerPemula(/get.urlbharat.xyz/, {'/safe.php': ['link', 'https://video.earnspace.in/'],}, false);
@@ -644,6 +644,7 @@
     BypassedByBloggerPemula(/send.cm|racaty.net|files.im|sharemods.com|clicknupload.to|modsbase.com/, function() {clickIfElementExists('#downloadbtn', 1);});
     BypassedByBloggerPemula(/sub2get.com/, function() {if (elementExists('#butunlock')) {let subt = bp('#butunlock > a:nth-child(1)').href;redirect(subt);}});
     BypassedByBloggerPemula(/takefile.link/, function() {if (elementExists('#F1')) {bp('div.no-gutter:nth-child(2) > form:nth-child(1)').submit();} else {}});
+    BypassedByBloggerPemula(/proviralhost.com/, function() {clickIfElementExists('#wait1button', 3);clickIfElementExists('#wait2button', 5, 'setInterval');});
     BypassedByBloggerPemula(/claimclicks.com/, function() {clickIfElementExists('div.col-md-12:nth-child(2) > form:nth-child(11) > button:nth-child(4)', 2);});
     BypassedByBloggerPemula(/ac.totsugeki.com/, function() {$("a[target='_blank']").removeAttr("target");clickIfElementExists('.btn-lg.btn-success.btn', 2);});
     BypassedByBloggerPemula(/fexkomin.xyz/, function() {$("a[target='_blank']").removeAttr("target");clickIfElementExists('.btn-captcha.btn-danger.btn', 3);});
@@ -656,7 +657,6 @@
     BypassedByBloggerPemula(/exee.app|exeo.app/, function() {if (elementExists('#before-captcha')) { setTimeout(function() {bp('#before-captcha').submit();}, 2000);}});
     BypassedByBloggerPemula(/1fichier.com/, function() {if (elementExists('#pass')){}else {clickIfElementExists('.btn-orange.btn-general.ok', 1);bp('.alc').submit();}});
     BypassedByBloggerPemula(/writedroid.eu.org/, function() {clickIfElementExists('#shortPostLink', 3);waitForElm("#shortGoToLink", dro => redirect(dro.href, false));});
-    BypassedByBloggerPemula(/proviralhost.com|examtadka.com/, function() {clickIfElementExists('#wait1button', 3);clickIfElementExists('#wait2button', 5, 'setInterval');});
     BypassedByBloggerPemula(/adsgo.digital|newsnowbd.com|techus.website/, function() {clickIfElementExists('.myButton', 2); $('.code-block-1.code-block > form').submit();});
     BypassedByBloggerPemula(/tinyurl.is|streamcheck.link/, function() {if (elementExists('ul > li > a')) {const link = bp('a[id^=newskip-btn]').href;redirect(link, false);}});
     BypassedByBloggerPemula(/kalvidudes.in|techwithsanikant.in|nulledlist.info|earnash.com/, () => waitForElm('div#getlinkbtn center a', kalv => redirect(kalv.href, false)));
