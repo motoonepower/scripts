@@ -20,7 +20,7 @@
 // @match      *://intercelestial.com/*
 // @match      *://safe.intipanime.com/*
 // @grant      none
-// @version    3.7
+// @version    3.8
 // @author     Bloggerpemula
 // @run-at     document-start
 // @description Bypass Addition for Bypass All Shortlinks
@@ -42,10 +42,10 @@
     function redirect(url, blog = true) {location = blog ? 'https://bas.nurul-huda.or.id/?url=' + url : url;}
 
     if (['interactive', 'complete'].includes(document.readyState)) {onHtmlLoaded();} else {document.addEventListener('DOMContentLoaded', onHtmlLoaded);}
-    function onHtmlLoaded() {let $ = window.jQuery; let respect = 'https://bas.nurul-huda.or.id/?url='; // Don't use My Scripts if You Change/Remove My Blogs, Except You Make Donations.
+    function onHtmlLoaded() {let $ = window.jQuery; let respect = 'https://free.nurul-huda.or.id/?url='; // Don't use My Scripts if You Change/Remove My Blogs, Except You Make Donations.
     if (['safe.intipanime.com', 'intercelestial.com', 'tribuntekno.com', 'mealob.com', 'smgplaza.com', 'namemegablog.com', 'blackleadr.com', 'megablogme.com'].indexOf(location.host) > -1) {function Bypass () {$("#showlink").delay(80).fadeIn("fast");$("#pleasewait").fadeIn("fast");} Bypass ();
     $('#landing').submit(); $('#headimg').remove(); $('#pleasewait').remove(); $('body,html').animate({scrollTop:0}, 100);
-    bp('.soractrl').appendChild(document.querySelector('.spoint')); bp('.soractrl img').remove(); bp('.spoint').src = 'https://i.ibb.co/c1tm9mz/Bypassed-By-Bloggerpemula.png'; bp('.spoint').title = 'Please Click Manually , Sorry at this time i dont have idea to make this auto, Silahkan di klik manual, maaf belum nemu ide biar bisa otomatis';}
+    bp('.soractrl').appendChild(document.querySelector('.spoint')); bp('.spoint').src = 'https://i.ibb.co/c1tm9mz/Bypassed-By-Bloggerpemula.png'; bp('.spoint').title = 'Please Click Manually , Sorry at this time i dont have idea to make this auto, Silahkan di klik manual, maaf belum nemu ide biar bisa otomatis';}
     if (elementExists('#go-link')) {$('#go-link').submit(function() {var form = $(this); var url = form.attr('action'); const pesan = form.find('button'); const notforsale = $(".navbar-collapse.collapse");
     const blogger = $(".main-header"); const pemula = $(".col-sm-6.hidden-xs");
     $.ajax({type: "POST", url: url, data: form.serialize(),
