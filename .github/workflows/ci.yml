@@ -34,6 +34,7 @@ jobs:
           sed -i 's https://bas.nurul-huda.or.id/?url= https://adguardteam.github.io/AnonymousRedirect/redirect.html?url= ' "Bypass All Shortlinks.user.js"
           sed -i 's rotator.nurul-huda.sch.id adguardteam.github.io ' "Bypass All Shortlinks.user.js"
           sed -i 's free.nurul-huda.or.id adguardteam.github.io ' "Bypass All Shortlinks.user.js"
+          sed -i 's free.nurul-huda.or adguardteam.github.io ' "Bypass All Shortlinks.user.js"
           sed -i 's https://free.nurul-huda.or.id/?url= https://adguardteam.github.io/AnonymousRedirect/redirect.html?url= ' "Bypass All Shortlinks.user.js"
           sed -i 's rotator.nurul-huda.sch adguardteam.github.io ' "Bypass All Shortlinks.user.js"
           sed -i 's bas.nurul-huda.or.id adguardteam.github.io ' "Bypass All Shortlinks.user.js"
