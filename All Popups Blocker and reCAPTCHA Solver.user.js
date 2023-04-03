@@ -9,12 +9,12 @@
 // @include     /^(https?:\/\/)(1dogecoin|faucet)(\.work)(\/.*)/
 // @match       *://*.filesearch.link/*
 // @match       *://*.trangchu.news/*
+// @match       *://*.ccshort.click/*
 // @match       *://*.bitcoinly.in/*
 // @match       *://*.cryptosh.pro/*
 // @match       *://*.vshort.link/*
 // @match       *://*.linka.click/*
 // @match       *://*.linkres.in/*
-// @match       *://*.yocto.link/*
 // @match       *://*.cashurl.in/*
 // @match       *://*.linkad.in/*
 // @match       *://*.cuturl.in/*
@@ -22,7 +22,7 @@
 // @match       *://*.aii.sh/*
 // @match       *://*.iir.ai/*
 // @match       *://*/adguardteam.github.io/*
-// @version     4.5
+// @version     4.6
 // @author      Blogger Pemula
 // @run-at      document-start
 // @license     GPL-3.0-or-later
